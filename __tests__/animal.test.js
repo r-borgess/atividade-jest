@@ -11,7 +11,7 @@ describe('insercao de animais', () => {
         fs.writeFileSync('src/data/animals.json', JSON.stringify(animalsData));
     });
 
-    it('cadastro de animal com sucesso', async () => {
+    it('cadastro de animal bem sucedido', async () => {
         const resposta = await request(app).post('/animais?nome=Spike&especie=Cachorro&idade=3');
         expect(resposta.status).toBe(201);//sucesso
     });
